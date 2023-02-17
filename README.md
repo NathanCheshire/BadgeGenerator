@@ -14,6 +14,7 @@ First you'll want to setup a virtual environemnt and install the required packag
 
 - `python -m venv venv`
 - `.\venv\Scripts\activate`
+- `pip install -r requirements.txt`
 
 Now you can run the script with the following arguments:
 
