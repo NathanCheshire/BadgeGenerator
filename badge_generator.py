@@ -106,17 +106,17 @@ def main():
                         default='245,245,245',
                         help='the color of the text to use in the format "r,g,b"')
     parser.add_argument('-lbc', '--left_background_color',
-                        default='131,83,5',
+                        default='5,83,131',
                         help='the color of the text to use in the format "r,g,b"')
     parser.add_argument('-rbc', '--right_background_color',
-                        default='199,147,85',
+                        default='85,147,199',
                         help='the color of the text to use in the format "r,g,b"')
 
     args = parser.parse_args()
 
     text_color = parse_tuple_color_from_bgr_string(args.text_color)
     left_background_color = parse_tuple_color_from_bgr_string(args.left_background_color)
-    right_background_color = parse_tuple_color_from_rgb_string(args.right_background_color)
+    right_background_color = parse_tuple_color_from_bgr_string(args.right_background_color)
     
     export_string_badge(left_text=args.left_text, 
                         right_text=args.right_text, 
