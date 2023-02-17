@@ -66,7 +66,9 @@ def get_text_size(text: str, font_size: int, font_name: str) -> tuple:
     Returns a tuple of the size (width, height) required to hold the provided 
     string with the provided font and point size.
     """
-    return ImageFont.truetype(font_name, font_size).getsize(text)
+    font = ImageFont.truetype(font_name, font_size)
+    bounding_box = font.getbbox(text)
+    return bounding_box[2], bounding_box[3]
 
 def parse_tuple_color_from_bgr_string(rgb_string: str) -> tuple:
     """
