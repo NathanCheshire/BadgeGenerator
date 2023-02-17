@@ -13,7 +13,7 @@ def export_string_badge(left_text: str,
                         vertical_padding: int,
                         text_color: tuple,
                         left_background_color: tuple,
-                        right_background_color: tuple):
+                        right_background_color: tuple) -> None:
     """ 
     Exports a badge image to the current directory, constructed using the provided parameters.
 
@@ -61,18 +61,26 @@ def export_string_badge(left_text: str,
     cv2.imwrite(save_name + '.png', np.array(base_colors_done))
 
 
-def get_text_size(text: str, font_size: int, font_name: str) -> tuple:
+def get_text_size(text: str, font_size: int, font_path: str) -> tuple:
     """ 
     Returns a tuple of the size (width, height) required to hold the provided 
     string with the provided font and point size.
+
+    :param text: the text to return the width and height of
+    :param font_size: the size of the true-type font
+    :param font_name: the path to the true-type font file
+    :return: a tuple representing the width and height
     """
-    font = ImageFont.truetype(font_name, font_size)
+    font = ImageFont.truetype(font_path, font_size)
     bounding_box = font.getbbox(text)
     return bounding_box[2], bounding_box[3]
 
-def parse_tuple_color_from_bgr_string(rgb_string: str) -> tuple:
+def reverse_rgb_tuple_to_bgr(rgb_string: str) -> tuple:
     """
-    Parses an rgb tuple from the provided bgr string of the format: "b,g,r".
+    Parses an rgb tuple from the provided string of the format: "r,g,b" and returns a bgr tuple.
+
+    :param rgb_string: the rgb string in the form: "r,g,b"
+    :return: a tuple representing a bgr color
     """
     parts = [int(part.strip()) for part in rgb_string.split(",")]
 
@@ -116,9 +124,9 @@ def main():
 
     args = parser.parse_args()
 
-    text_color = parse_tuple_color_from_bgr_string(args.text_color)
-    left_background_color = parse_tuple_color_from_bgr_string(args.left_background_color)
-    right_background_color = parse_tuple_color_from_bgr_string(args.right_background_color)
+    text_color = reverse_rgb_tuple_to_bgr(args.text_color)
+    left_background_color = reverse_rgb_tuple_to_bgr(args.left_background_color)
+    right_background_color = reverse_rgb_tuple_to_bgr(args.right_background_color)
     
     export_string_badge(left_text=args.left_text, 
                         right_text=args.right_text, 
