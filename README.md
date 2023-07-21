@@ -10,11 +10,22 @@
 
 ## Getting Started
 
-First you'll want to setup a virtual environemnt and install the required packages:
+First you'll want to setup a virtual environemnt:
 
-- `python -m venv venv`
-- `.\venv\Scripts\activate`
-- `pip install -r requirements.txt`
+`python -m venv venv` or `python3 -m venv venv`
+
+Note you can replace the second venv with whatever you want ot name your virtual environment.
+Now that we have our environment, we need to enter it. If you're on Windows simply:
+
+`.\venv\Scripts\activate`
+
+If you're on Mac OSX, you'll need to source it:
+
+`source ./venv/bin/activate`
+
+Now you can install the requirements once inside of the virtual environment:
+
+`pip install -r requirements.txt`
 
 Now you can run the script with the following arguments:
 
