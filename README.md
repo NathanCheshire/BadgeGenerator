@@ -10,7 +10,7 @@
 
 ## Getting Started
 
-First you'll want to setup a virtual environemnt:
+First you'll want to setup a virtual environment:
 
 `python -m venv venv` or `python3 -m venv venv`
 
