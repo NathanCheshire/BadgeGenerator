@@ -104,7 +104,6 @@ def main():
                         default='26',
                         help='the size of the text')
     parser.add_argument('-sn', '--save_name',
-                        required=True,
                         help='the name to save the png badge as')
     parser.add_argument('-hp', '--horizontal_padding',
                         default=15,
@@ -123,6 +122,9 @@ def main():
                         help='the color of the text to use in the format "r,g,b"')
 
     args = parser.parse_args()
+
+    if args.save_name is None:
+        args.save_name = f"{args.left_text}_{args.right_text}"
 
     text_color = reverse_rgb_tuple_to_bgr(args.text_color)
     left_background_color = reverse_rgb_tuple_to_bgr(args.left_background_color)
