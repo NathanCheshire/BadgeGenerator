@@ -98,10 +98,10 @@ def main():
                         required=True,
                         help='the right text of the badge')
     parser.add_argument('-fp', '--font_path',
-                        required=True,
+                        default="./fonts/oswald-semi-bold.ttf",
                         help='the relative or absolute path to the true-type font to use for the badge text')
     parser.add_argument('-ts', '--text_size',
-                        required=True,
+                        default='26',
                         help='the size of the text')
     parser.add_argument('-sn', '--save_name',
                         required=True,
