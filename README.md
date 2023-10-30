@@ -2,19 +2,19 @@
 
 ![Author](./badges/author_badge.png)
 
-![Inspired](./badges/inspired_badge.png)
+![InspiredBy](./badges/inspired_badge.png)
 
-![Author](./badges/made_badge.png)
+![MadeWith](./badges/made_badge.png)
 
-![Author](./badges/for_badge.png)
+![ForTheBadge](./badges/for_badge.png)
 
 ## Getting Started
 
-First you'll want to setup a virtual python environment to execute the script from:
+First, you'll want to set up a virtual Python environment from which to execute the script:
 
 `python -m venv badge-generator-venv` or `python3 -m venv badge-generator-venv`
 
-Now that we have our environment, we need to enter it. If you're on Windows simply:
+Now that we have our environment we need to enter it. If you're on Windows simply:
 
 `.\badge-generator-venv\Scripts\activate`
 
