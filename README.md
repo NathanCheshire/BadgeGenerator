@@ -35,7 +35,7 @@ Required:
 
 Optional:
 
-- -sn (--save_name): the name to save the resulting PNG as, defaults to `left_text`_`right_text`
+- -sn (--save*name): the name to save the resulting PNG as, defaults to `left_text`*`right_text`
 - -fp (--font_path): the path to the [true-type](https://en.wikipedia.org/wiki/TrueType) font to use for the badge left and right text, defaults to `./fonts/oswald-semi-bold.ttf`
 - -ts (--text_size): the size of the text, defaults to `26`
 - -hp (--horizontal_padding): the padding between the text and the horizontal borders, defaults to `15`
@@ -49,3 +49,9 @@ You can use `deactivate` to leave the virtual environment.
 ## Quick start
 
 `python -m venv badge-generator-venv && source ./badge-generator-venv/bin/activate && pip install -r requirements.txt`
+
+## Examples
+
+Simple usage: `python badge_generator.py -lt "left text" -rt "right text"`
+
+All parameters: `python badge_generator.py -lt "left text" -rt "right text" -sn "save-name" -fp "./path/to/my/font.ttf" -ts 18 -hp 10 -vp 10 -tc 255,255,255 -lbc 0,0,0 - rbc 0,0,0`
