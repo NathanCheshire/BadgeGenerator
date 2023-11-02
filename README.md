@@ -54,4 +54,4 @@ You can use `deactivate` to leave the virtual environment.
 
 Simple usage: `python badge_generator.py -lt "left text" -rt "right text"`
 
-All parameters: `python badge_generator.py -lt "left text" -rt "right text" -sn "save-name" -fp "./path/to/my/font.ttf" -ts 18 -hp 10 -vp 10 -tc 255,255,255 -lbc 0,0,0 - rbc 0,0,0`
+All parameters: `python badge_generator.py -lt "left text" -rt "right text" -sn "save-name" -fp "./path/to/my/font.ttf" -ts 18 -hp 10 -vp 10 -tc 255,255,255 -lbc 0,0,0 -rbc 0,0,0`
